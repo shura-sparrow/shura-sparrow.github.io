@@ -20,7 +20,7 @@ $(function(){
         $projectIframe.removeClass(loadIframeClass);
     });
 
-    var $firstLink = $links.first().addClass($sel_class);
+    var $firstLink = $links.first().parent().addClass($sel_class);
 
     var src = $firstLink.attr('href');
 
