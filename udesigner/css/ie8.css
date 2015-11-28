@@ -1,0 +1,9 @@
+.plain-button:after {
+    display: none;
+}
+.slick-dots button,
+.menu-lavalamp,
+.plain-checkbox {
+    filter: alpha(opacity=0);
+    outline: 0;
+}

@@ -1,0 +1,26 @@
+.submenu {
+    width: 480px;
+}
+.submenu .submenu__item {
+    float: left;
+    width: 33%;
+}
+.submenu--mod {
+    width: 109px;
+}
+.submenu--mod .submenu__item {
+    float: none
+}
+
+.filter .filter__item .fake-checkbox {
+    top: -2px;
+}
+.filter .filter__item-inner {
+    padding-bottom: 2px;
+}
+.pager a {
+    padding-bottom: 2px;
+}
+.price-input {
+    padding-top: 2px;
+}

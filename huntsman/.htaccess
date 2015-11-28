@@ -1,0 +1,5 @@
+#Satisfy any
+AuthName "Private area"
+AuthType Basic
+AuthUserFile /usr/local/www/data-dist/.htpasswd-huntsman_layout
+Require valid-user

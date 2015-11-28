@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <!--+script([], ['common.min.js'])-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="imagetoolbar" content="no">
+    <meta name="msthemecompatible" content="no">
+    <meta name="cleartype" content="on">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>Техносила</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="copyright" content="">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,900" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+    <link href="styles/common.css" rel="stylesheet">
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.full&amp;lang=ru-RU" type="text/javascript"></script>
+    <script>
+      var doc = document.documentElement;
+      doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+  </head>
+  <body>
+    <div class="layout container-fluid">
+      <div class="row">
+        <!--site header-->
+        <header class="site-header">
+          <div class="site-header-fix">
+            <div class="col-xs-24">
+              <div class="col-xs-8">
+                <div id="menu_trigger" class="menu-trigger svg-menu"></div>
+              </div>
+              <div class="col-xs-8"><a href="ipage.html"><img src="img/site-logo.png" alt="Техносила" class="site-logo"></a></div>
+              <div class="col-xs-4">
+                <div id="search_trigger" class="search-trigger svg-search"></div>
+              </div>
+              <div class="col-xs-4"><a href="#" class="basket-link"><span id="basketCol" class="basket-link__col">2</span></a></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </header>
+        <!--/site header-->
+        <!--menu popup-->
+        <div id="menu_popup" class="popup menu-popup dark-popup">
+          <div class="popup__close dark-popup__close popupClose"></div>
+          <div class="col-xs-22 col-md-24 col-xs-offset-1 col-md-offset-0">
+            <div class="authorize_block">Здравствуйте,<a id="authorize_trigger" class="authorize_link"> Авторизуйтесь</a></div>
+          </div>
+          <div class="clearfix"></div>
+          <ul class="site-menu">
+            <li class="site-menu__item"><a id="city_trigger" class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon"></div><span>Москва</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-catalog_icon"></div>
+                  </div><span>Каталог товаров</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-action_icon"></div>
+                  </div><span>Акции</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-new_icon"></div>
+                  </div><span>Новинки</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-setup_icon"></div>
+                  </div><span>Установка и настройка</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-magazine_icon"></div>
+                  </div><span>Газета Техносила</span>
+                </div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-shop_add_icon"></div>
+                  </div><span>Адреса магазинов</span>
+                </div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-help_icon"></div>
+                  </div><span>Помощь</span>
+                </div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-credit_card_icon"></div>
+                  </div><span>Оплата</span>
+                </div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-directions_icon"></div>
+                  </div><span>Доставка</span>
+                </div></a></li>
+          </ul>
+        </div>
+        <!-- /menu popup-->
+        <!--city popup-->
+        <div id="city_popup" class="popup menu-popup dark-popup">
+          <div class="popup__back popupClose">Назад</div>
+          <div class="col-xs-22 col-md-24 col-xs-offset-1 col-md-offset-0">
+            <form class="city-search">
+              <input type="text" id="city_search" placeholder="Поиск по городам" class="form-control plain-input">
+              <button type="submit" class="city-search__submit"></button>
+            </form>
+          </div>
+          <div class="clearfix"></div>
+          <ul class="site-menu city-list">
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Москва</span></div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Санкт-Петербург</span></div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Воронеж</span></div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Самара</span></div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Новосибирск</span></div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Белгород</span></div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Великий Новгород</span></div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Владимир</span></div></a></li>
+          </ul>
+        </div>
+        <!-- /city popup-->
+        <!--city find popup-->
+        <div id="city_find_popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade city_find_popup bs-example-modal-sm">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true"></span></button>
+              <div class="modal-body">
+                <div class="col-xs-22 col-xs-offset-1">
+                  <div class="modal-message">Сайт http://tehnosila.ru запрашивает разрешение на использование Вашей текущей геопозиции</div>
+                  <div class="buttons-area"><a href="#" class="button-control">ОК</a><a href="#" class="button-control-reset">Не разрешать</a></div>
+                </div>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+        <!-- /city find popup-->
+        <!--search block-->
+        <div id="searchBlock" class="search">
+          <div class="col-xs-24 col-md-24">
+            <form action="/">
+              <input type="text" id="search__input" name="search__input" placeholder="Поиск товаров" class="form-control plain-input plain-input--mod">
+              <div class="search__reset"></div>
+              <div class="btn-colored-outer search__button">
+                <button type="submit" value="Подписаться" class="btn btn-default btn-colored"><span class="search__button-inner"></span></button>
+              </div>
+            </form>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- /search block-->
+        <div class="row">
+          <div class="col-xs-24 col-md-24">
+            <h1 class="page-title page-title__mod"><span>Личный кабинет</span><a href="#" class="page-back"></a></h1>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- actions goodies list-->
+        <div class="col-xs-24 col-md-24">
+          <div class="outer-text">
+            <p>Здравствуйте Александр!</p>
+          </div>
+          <ul class="category-list category-list--mod">
+            <li class="category-list__item"><a href="#"><span class="col-xs-24 col-md-24">Мои заказы</span></a></li>
+            <li class="category-list__item"><a href="#"><span class="col-xs-24 col-md-24">Мои списки</span></a></li>
+            <li class="category-list__item"><a href="#"><span class="col-xs-24 col-md-24">Моя корзина</span></a></li>
+            <li class="category-list__item"><a href="#"><span class="col-xs-24 col-md-24">Личные данные</span></a></li>
+            <li class="category-list__item"><a href="#"><span class="col-xs-24 col-md-24">Изменить пароль</span></a></li>
+            <li class="category-list__item"><a href="#"><span class="col-xs-24 col-md-24">Подписка на рассылку</span></a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+        <!--sign block in the bottom-->
+        <div class="sign">
+          <div class="col-xs-24 col-md-24">
+            <div class="sign-title">Подпишись на рассылку и плати меньше!</div>
+            <form action="/">
+              <!--div.has-error - add this class to show error-->
+              <div>
+                <input type="text" name="sign_input" id="sign_input" placeholder="Введите свой Email" class="form-control plain-input plain-input--mod">
+                <div class="div btn-colored-outer sign__button">
+                  <input type="submit" value="Подписаться" class="btn btn-default btn-colored">
+                </div>
+              </div>
+            </form>
+            <!--thank you message-->
+            <!--<div class='sign_message'>
+            <div class="sign_message-in">Спасибо!</div>
+            Вы успешно подписаны на нашу рассылку.<br> Пожалуйста, проверьте Вашу почту.
+            </div>
+            -->
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- /sign block in the bottom-->
+        <!-- site footer-->
+        <footer class="site-footer">
+          <div id="accordion" aria-multiselectable="true" role="tablist" class="div bottom_menu">
+            <div class="div panel panel-default bottom_menu__item">
+              <div role="tab" id="footer_head1" class="div panel-heading bottom_menu__heading">
+                <div class="panel-title bottom_menu__title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1" class="collapsed">
+                    <div class="col-xs-offset-1 col-xs-22 col-md-24 col-md-offset-0">Интернет-магазин<span class="bottom_menu__sign"></span></div></a></div>
+                <div class="clearfix"></div>
+                <div id="collapse1" role="tabpanel" aria-labelledby="footer_head1" class="panel-collapse collapse">
+                  <div class="panel-body bottom_menu__body col-xs-offset-1 col-xs-22 col-md-24 col-md-offset-0">
+                    <ul class="bottom-menu__list">
+                      <li class="bottom-menu__item"><a href="#">Помощь покупателю</a></li>
+                      <li class="bottom-menu__item"><a href="#">Доставка</a></li>
+                    </ul>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="div panel panel-default bottom_menu__item">
+              <div role="tab" id="footer_head2" class="div panel-heading bottom_menu__heading">
+                <div class="panel-title bottom_menu__title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2" class="collapsed">
+                    <div class="col-xs-offset-1 col-xs-22 col-md-24 col-md-offset-0">Информация для покупателей<span class="bottom_menu__sign"></span></div></a></div>
+                <div class="clearfix"></div>
+                <div id="collapse2" role="tabpanel" aria-labelledby="footer_head2" class="panel-collapse collapse">
+                  <div class="panel-body bottom_menu__body col-xs-offset-1 col-xs-22 col-md-24 col-md-offset-0">
+                    <ul class="bottom-menu__list">
+                      <li class="bottom-menu__item"><a href="#">Помощь покупателю</a></li>
+                      <li class="bottom-menu__item"><a href="#">Доставка</a></li>
+                    </ul>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="div panel panel-default bottom_menu__item">
+              <div role="tab" id="footer_head3" class="div panel-heading bottom_menu__heading">
+                <div class="panel-title bottom_menu__title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3" class="collapsed">
+                    <div class="col-xs-offset-1 col-xs-22 col-md-24 col-md-offset-0">О компании<span class="bottom_menu__sign"></span></div></a></div>
+                <div class="clearfix"></div>
+                <div id="collapse3" role="tabpanel" aria-labelledby="footer_head3" class="panel-collapse collapse">
+                  <div class="panel-body bottom_menu__body col-xs-offset-1 col-xs-22 col-md-24 col-md-offset-0">
+                    <ul class="bottom-menu__list">
+                      <li class="bottom-menu__item"><a href="#">Помощь покупателю</a></li>
+                      <li class="bottom-menu__item"><a href="#">Доставка</a></li>
+                    </ul>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- contacts and socials-->
+          <div class="connection row">
+            <div class="col-xs-24 col-md-24">
+              <div class="footer-phone-title">Единая справочная служба</div><a href="tel:88007778777">
+                <div class="btn-colored-outer footer-phone">
+                  <div class="btn btn-default btn-colored">8 800 777-8-777</div>
+                </div></a>
+            </div>
+            <div class="col-xs-24 col-md-24">
+              <ul class="socials">
+                <li class="social_button"><a href="#" title="vk" class="vk_button"></a></li>
+                <li class="social_button"><a href="#" title="facebook" class="facebook_button"></a></li>
+                <li class="social_button"><a href="#" title="twitter" class="twitter_button"></a></li>
+                <li class="social_button"><a href="#" title="ok" class="ok_button"></a></li>
+                <li class="social_button"><a href="#" title="instagram" class="instagram_button"></a></li>
+                <li class="social_button"><a href="#" title="youtube" class="youtube_button"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="copyright col-xs-24 col-md-24"> Copyright &copy;&nbsp;Техносила</div>
+          <!-- /contacts and socials-->
+        </footer>
+        <!-- /site footer-->
+        <div class="layer"></div>
+        <div id="loading_layer" class="layer-loading"></div>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+        <script src="scripts/jquery-ui.min.js"></script>
+        <script src="scripts/touch-punch.min.js"></script>
+        <script src="scripts/slick.min.js"></script>
+        <script src="scripts/jquery.lazyload.js"></script>
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/popups.js"></script>
+        <script src="scripts/filter.js"></script>
+        <script src="scripts/lists.js"></script>
+        <script src="scripts/cart.js"></script>
+        <script src="scripts/shops.js"></script>
+        <script src="scripts/yStoreMap.js"></script>
+        <script src="scripts/scripts.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

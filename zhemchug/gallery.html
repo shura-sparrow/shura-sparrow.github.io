@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html id="nojs" lang="ru"> 
+<head>
+<meta charset="utf-8"> 
+<link href="css/main.css" rel="stylesheet">
+<link href="css/fancybox2.css" rel="stylesheet">
+<!--[if lte IE 9.0]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <link href="css/ie.css" rel="stylesheet"/>
+<![endif]-->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+    document.documentElement.id = 'js';    
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__bg"></div>
+        <section class="b-layout header__inner">
+               <a href="index.html"><img class="b-mnlg" src="im/mnlg.png" alt="Стоматологический центр Жемчуг" title="Стоматологический центр Жемчуг"></a>
+               <div class="header__contacts">
+                   (48439) 3-75-97
+                   <div class="header__address">
+                       <a href="contacts.html">
+                           <ins class="header__address-icon"></ins>
+                           Обнинск, пр.&nbsp;Ленина, д.&nbsp;85
+                       </a>
+                   </div>
+               </div>
+               <div class="cl"></div>
+        </section>
+    </header>
+    <nav class="top-menu">
+        <div class="b-layout top-menu__inner">
+            <div class="top-menu__left"></div>
+            <ul class="g-list top-menu__list">
+                <li class="top-menu__list-sel">О центре</li>
+                <li><a href="#">Услуги и цены</a></li>
+                <li><a href="#">Скидки</a></li>
+                <li><a href="#">Специалисты</a></li>
+                <li><a href="#">Советы врача</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <div class="top-menu__right"></div>
+        </div>
+    </nav>
+    <section class="b-layout page-body">
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <ul class="g-list">
+                    <li class="sidebar-menu__item"><a href="#">О центре</a></li>
+                    <li class="sidebar-menu__item"><a href="#">Оборудование</a></li>
+                    <li class="sidebar-menu__item"><a href="#">Технологии</a></li>
+                    <li class="sidebar-menu__item sidebar-menu__item-sel">Новости</li>
+                    <li class="sidebar-menu__item"><a href="#">Вакансии</a></li>
+                    <li class="sidebar-menu__item"><a href="#">Мероприятия</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="main-content">
+            <div class="main-title"><h1>О компании</h1></div>
+            <div class="gallery">
+                <a href="im/pic-1.jpg"  title="Кариес" rel="fancybox"><img src="im/gallery.png" alt=""></a>
+                <a href="im/pic-2.jpg"  title="Боль" rel="fancybox"><img src="im/gallery.png" alt=""></a>
+                <a href="im/pic-1.jpg"  title="Протез" rel="fancybox"><img src="im/gallery.png" alt=""></a>
+                <a href="im/pic-2.jpg"  title="Большой тайтл" rel="fancybox"><img  src="im/gallery.png" alt=""></a>
+            </div>
+        </section>
+        <div class="cl"></div>
+    </section>
+    <div class="b-layout">
+        <footer class="site-footer">
+            <div class="l-block">
+                <div class="company-name">&copy;&nbsp;2013 Стоматологический центр &laquo;Жемчуг&raquo;</div>
+                <a href="#">Контактная информация</a>
+            </div>
+            <div class="r-block logos">
+                <a href="#"><img src="im/logo-1.png" alt=""></a>
+                <a href="#"><img src="im/logo-2.png" alt=""></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript" src="http://yandex.st/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script>
+
+    $(document).ready(function(){
+        if ($('.gallery').length) {
+            $(".gallery a").fancybox({
+                padding:0,
+                width:'80%',
+                height:'80%'
+            });
+        }
+    })
+</script>
+</html>

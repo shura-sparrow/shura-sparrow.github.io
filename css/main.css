@@ -1,0 +1,432 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@font-face {
+    font-family: 'Circe-Regular';
+    src: url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/Circe-Regular.otf')  format('opentype'),
+    url('../fonts/Circe-Regular.woff') format('woff'), url('../fonts/Circe-Regular.ttf')  format('truetype'), url('../fonts/Circe-Regular.svg#Circe-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Circe-Bold';
+    src: url('../fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Circe-Bold.otf')  format('opentype'),
+    url('../fonts/Circe-Bold.woff') format('woff'), url('../fonts/Circe-Bold.ttf')  format('truetype'), url('../fonts/Circe-Bold.svg#Circe-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello.eot?81855567');
+    src: url('../fonts/fontello.eot?81855567#iefix') format('embedded-opentype'),
+    url('../fonts/fontello.woff?81855567') format('woff'),
+    url('../fonts/fontello.ttf?81855567') format('truetype'),
+    url('../fonts/fontello.svg?81855567#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+    font-family: "Circe-Regular", sans-serif;
+    background: #fff;
+    color: #333;
+}
+p {
+    margin-bottom: 10px;
+}
+.container {
+    padding: 0 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.site-header {
+    border-top: 7px solid #41969c;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+.main-title {
+    font-size: 40px;
+    margin: 0 0 5px;
+    padding: 0;
+    line-height: 1;
+}
+.main-subtitle {
+    color: #136D76;
+    font-size: 30px;
+}
+.portrait,
+.titles {
+    vertical-align: middle;
+    display: inline-block;
+}
+.portrait {
+    margin-right: 20px;
+}
+.reset {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.portfolio {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 -10px;
+}
+.portfolio__item {
+    margin-bottom: 20px;
+}
+.portfolio__item img {
+    border: 5px solid #eee;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.socials {
+    float: right;
+    margin-top: 90px;
+}
+.socials__icon {
+    display: inline-block;
+    color: #E88161;
+    text-decoration: none;
+    vertical-align: middle;
+    margin-left: 14px;
+    font-size: 30px;
+    line-height: 1;
+    opacity: 0.8;
+}
+.socials__icon:hover {
+    opacity: 1
+}
+.icon-skype {
+    margin-top: 2px;
+}
+.icon-email {
+    margin-top: 4px;
+}
+.icon-linkedin {
+    margin-right: -7px;
+}
+.icon-facebook-rect {
+    margin-top: 2px;
+}
+.section-title {
+    font-size: 35px;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 40px;
+}
+.section-title:after {
+    position: absolute;
+    bottom: -13px;
+    height: 5px;
+    background: #41969c;
+    content: "";
+    left: 0;
+    width: 60px;
+}
+.section-block {
+    margin-bottom: 60px;
+}
+.skill {
+    line-height: 30px;
+    font-size: 14px;
+    height: 30px;
+    white-space: nowrap;
+    color: #fff;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-skype:before { content: '\e800'; } /* '' */
+.icon-linkedin:before { content: '\e801'; } /* '' */
+.icon-email:before { content: '\e802'; } /* '' */
+.icon-facebook-rect:before { content: '\e803'; } /* '' */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

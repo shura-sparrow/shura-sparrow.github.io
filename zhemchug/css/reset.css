@@ -1,0 +1,177 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	outline: 0;
+	font-size: 100%;
+	}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline: 0;
+}
+html, body { 
+	line-height: 1;
+	}
+img {
+	border:0;
+	}
+button, input {
+	overflow:visible;
+	}
+table {
+	border-spacing: 0;
+	border-collapse:collapse;
+	}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+caption, th, td {
+text-align:left;
+}
+th {
+font-weight:normal;
+}
+h1,h2,h3,h4,h5,h6 {
+	font:normal 1em;
+}
+h1 {
+	font-size: 1.7em;
+	margin-bottom: .3em;
+	}
+h2 {
+	font-size: 1.5em;
+	margin-bottom: .2em;
+	margin-top: 1.3em;
+	}
+h3 {
+	font-size: 1.4em;
+	margin-bottom: .3em;
+	}
+h4 {
+	font-size: 1.3em;
+	margin-bottom: 1.5em;
+	margin-top: 1em;
+    font-weight: normal;
+	}
+h5 {
+	font-size: 1.2em;
+	margin-top: 1.3em;
+	margin-bottom: .4em;
+	}
+h6 {
+	font-size:1em;
+	margin-top:1em;
+	margin-bottom:.5em;
+	}
+
+.l-pic {
+	float:left;
+	margin:0 28px 26px 0;
+	clear:left;
+	}
+.l-pic-2 {
+	float:left;
+	margin:0 28px 0 0;
+	clear:left;
+	}
+.r-pic {
+	float: right;
+	clear: right;
+	margin: 0 0 .5em 1em;
+	}
+.pics img {
+    margin-right: 1em;
+}
+ul{
+	padding:0;
+}
+ol{
+	padding:0 0 0 1.5em;
+}
+ul, ol{
+	
+	margin:0 0 1.5em 0;
+}
+ul li,
+ol li{
+	margin-bottom:0.5em;
+}
+ol li li, 
+ul li li {
+	margin-bottom:0.35em;
+}
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+	margin:0.8em 0 1.3em 0;
+}
+ul li {
+	list-style-type:none;
+	margin-bottom:.3em;
+	background:url('../im/round.gif') left .55em no-repeat;
+	text-indent:0;
+	padding-left:15px;
+}
+p {
+	padding-top:0;
+	margin-bottom:1.2em;
+	line-height:1.35em;
+	/*border:1px solid red;
+	background:blue;*/
+	}
+caption {
+	clear:both;
+	text-align:left;
+	font-weight:bold;
+	}
+
+table {
+	font-size:100%;
+	line-height:1.3em;
+	margin-bottom:1.8em;
+	/*background:yellow;*/
+	}
+.b-text-strong {
+	font:18px/23px Arial, Helvetica,sans-serif;
+	}
+.b-content-2columns {
+	overflow:hidden;
+	zoom:1;
+	margin-left:-33px;
+	}
+	.b-content-2columns  .b-2cols-item {
+		float:left;
+		width:420px;
+		margin-left:33px;
+		}
+.content {
+	margin-bottom: 30px;
+}
+.content p {
+	margin-left: 40px;
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <!--+script([], ['common.min.js'])-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="imagetoolbar" content="no">
+    <meta name="msthemecompatible" content="no">
+    <meta name="cleartype" content="on">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <title>Техносила</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="copyright" content="">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,900" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet" type="text/css">
+    <link href="styles/common.css" rel="stylesheet">
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.full&amp;lang=ru-RU" type="text/javascript"></script>
+    <script>
+      var doc = document.documentElement;
+      doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+  </head>
+  <body>
+    <div class="layout container-fluid">
+      <div class="row">
+        <!--site header-->
+        <header class="site-header">
+          <div class="site-header-fix">
+            <div class="col-xs-24">
+              <div class="col-xs-8">
+                <div id="menu_trigger" class="menu-trigger svg-menu"></div>
+              </div>
+              <div class="col-xs-8"><a href="ipage.html"><img src="img/site-logo.png" alt="Техносила" class="site-logo"></a></div>
+              <div class="col-xs-4">
+                <div id="search_trigger" class="search-trigger svg-search"></div>
+              </div>
+              <div class="col-xs-4"><a href="#" class="basket-link"><span id="basketCol" class="basket-link__col">2</span></a></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </header>
+        <!--/site header-->
+        <!--menu popup-->
+        <div id="menu_popup" class="popup menu-popup dark-popup">
+          <div class="popup__close dark-popup__close popupClose"></div>
+          <div class="col-xs-22 col-md-24 col-xs-offset-1 col-md-offset-0">
+            <div class="authorize_block">Здравствуйте,<a id="authorize_trigger" class="authorize_link"> Авторизуйтесь</a></div>
+          </div>
+          <div class="clearfix"></div>
+          <ul class="site-menu">
+            <li class="site-menu__item"><a id="city_trigger" class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon"></div><span>Москва</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-catalog_icon"></div>
+                  </div><span>Каталог товаров</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-action_icon"></div>
+                  </div><span>Акции</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-new_icon"></div>
+                  </div><span>Новинки</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-setup_icon"></div>
+                  </div><span>Установка и настройка</span>
+                </div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-magazine_icon"></div>
+                  </div><span>Газета Техносила</span>
+                </div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-shop_add_icon"></div>
+                  </div><span>Адреса магазинов</span>
+                </div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-help_icon"></div>
+                  </div><span>Помощь</span>
+                </div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-credit_card_icon"></div>
+                  </div><span>Оплата</span>
+                </div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0">
+                  <div class="site-menu-icon">
+                    <div class="svg-directions_icon"></div>
+                  </div><span>Доставка</span>
+                </div></a></li>
+          </ul>
+        </div>
+        <!-- /menu popup-->
+        <!--city popup-->
+        <div id="city_popup" class="popup menu-popup dark-popup">
+          <div class="popup__back popupClose">Назад</div>
+          <div class="col-xs-22 col-md-24 col-xs-offset-1 col-md-offset-0">
+            <form class="city-search">
+              <input type="text" id="city_search" placeholder="Поиск по городам" class="form-control plain-input">
+              <button type="submit" class="city-search__submit"></button>
+            </form>
+          </div>
+          <div class="clearfix"></div>
+          <ul class="site-menu city-list">
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Москва</span></div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Санкт-Петербург</span></div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Воронеж</span></div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Самара</span></div></a></li>
+            <li class="site-menu__item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Новосибирск</span></div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Белгород</span></div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Великий Новгород</span></div></a></li>
+            <li class="site-menu__add-item"><a class="site-menu__link">
+                <div class="col-xs-22 col-xs-offset-1 col-md-offset-0"><span>Владимир</span></div></a></li>
+          </ul>
+        </div>
+        <!-- /city popup-->
+        <!--city find popup-->
+        <div id="city_find_popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade city_find_popup bs-example-modal-sm">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true"></span></button>
+              <div class="modal-body">
+                <div class="col-xs-22 col-xs-offset-1">
+                  <div class="modal-message">Сайт http://tehnosila.ru запрашивает разрешение на использование Вашей текущей геопозиции</div>
+                  <div class="buttons-area"><a href="#" class="button-control">ОК</a><a href="#" class="button-control-reset">Не разрешать</a></div>
+                </div>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+        <!-- /city find popup-->
+        <!--search block-->
+        <div id="searchBlock" class="search">
+          <div class="col-xs-24 col-md-24">
+            <form action="/">
+              <input type="text" id="search__input" name="search__input" placeholder="Поиск товаров" class="form-control plain-input plain-input--mod">
+              <div class="search__reset"></div>
+              <div class="btn-colored-outer search__button">
+                <button type="submit" value="Подписаться" class="btn btn-default btn-colored"><span class="search__button-inner"></span></button>
+              </div>
+            </form>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- /search block-->
+        <div class="col-xs-24 col-md-24">
+          <div class="page-title__outer">
+            <h1 class="page-title"><a href="/basket.html">Оформление заказа</a></h1>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <form action="/" class="order-form">
+          <div class="col-xs-24 col-md-24">
+            <!-- user data-->
+            <div class="outer-block outer-block--mod">
+              <div class="col-xs-24 col-md-24">
+                <div class="form-group__title">Данные получателя</div>
+                <div class="form-group has-error">
+                  <input name="username" required placeholder="Ваше имя *" class="form-control plain-input">
+                  <div class="error">Неверное имя пользователя</div>
+                </div>
+                <div class="form-group">
+                  <input name="phone" required placeholder="Телефон *" class="form-control plain-input">
+                </div>
+                <div class="form-group">
+                  <input name="email" required placeholder="Электронная почта *" class="form-control plain-input">
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- /user data-->
+            <!-- delivery-->
+            <div class="outer-block outer-block--mod">
+              <div class="col-xs-24 col-md-24">
+                <div class="form-group__title">Доставка по Москве, МО</div>
+                <div class="form-group">
+                  <input name="city" required placeholder="Населенный пункт *" class="form-control plain-input">
+                </div>
+                <div class="form-group">
+                  <select name="metro" class="form-control">
+                    <option value="0">Станция метро*</option>
+                    <option value="1">Новослободская</option>
+                    <option value="2">Мякинино</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input name="street" required placeholder="Улица *" class="form-control plain-input">
+                </div>
+                <div class="form-group row">
+                  <div class="col-xs-6 col-md-6">
+                    <textarea rows="1" cols="10" name="street" placeholder="Дом /
+Корп. *" class="form-control plain-input textarea-spec"></textarea>
+                  </div>
+                  <div class="col-xs-6 col-md-6">
+                    <input name="app" required placeholder="Кв / оф" class="form-control plain-input">
+                  </div>
+                  <div class="col-xs-6 col-md-6">
+                    <input name="floor" required placeholder="Этаж" class="form-control plain-input">
+                  </div>
+                  <div class="col-xs-6 col-md-6">
+                    <input name="way" required placeholder="Под" class="form-control plain-input">
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group form-show__outer">
+                  <div>Добавить&nbsp;<a href="#" class="form-show__trigger">комментарий к заказу</a></div>
+                  <div class="form-show__block">
+                    <textarea rows="5" cols="10" placeholder="Text area content" class="form-control form-control--gap"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- /delivery-->
+            <div class="outer-block outer-block--mod">
+              <div class="col-xs-24 col-md-24">
+                <div class="form-group__title">Дата и время доставки</div>
+                <div class="form-group select-outer">
+                  <div class="btn btn-default day-pick"></div>
+                  <select name="date" id="date" class="form-control">
+                    <option value="0">5 июня 2015</option>
+                    <option value="1">6 июня 2015</option>
+                    <option value="2">7 июня 2015</option>
+                  </select>
+                </div>
+                <div class="form-group select-outer">
+                  <div class="btn btn-default time-pick"></div>
+                  <select name="time" id="time" class="form-control">
+                    <option value="0">10:00 - 14:00</option>
+                    <option value="1">14:00 - 18:00</option>
+                    <option value="2">18:00 - 22:00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="outer-block outer-block--mod">
+              <div class="col-xs-24 col-md-24">
+                <div class="form-group__title">Способ оплаты</div>
+                <div class="ways-block">
+                  <div class="way__item way__item-sel">
+                    <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                      <div class="way__title">Оплатить при получении</div>
+                      <div class="way__descr">Оплата заказа наличными или картой сотруднику Службы доставки при получении</div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="way__hidden">
+                      <div class="way__mode way__mode-sel">
+                        <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                          <input type="radio" checked="checked" name="paymentSystem" value="1" id="cash">
+                          <label for="cash" class="input-title">Наличными</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="way__mode">
+                        <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                          <input type="radio" name="paymentSystem" value="2" id="card">
+                          <label for="card" class="input-title">Банковской картой</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="way__item">
+                    <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                      <div class="way__title">Оплатить сейчас онлайн</div>
+                      <div class="way__descr">Оплата сразу банковской картой, через PayPal, подарочной картой или по банковскому счёту</div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="way__hidden">
+                      <div class="way__mode">
+                        <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                          <input type="radio" name="paymentSystem" value="1" id="paypal">
+                          <label for="paypal" class="input-title">Paypal</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="way__mode">
+                        <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                          <input type="radio" name="paymentSystem" value="2" id="present">
+                          <label for="present" class="input-title">Подарочной картой</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="way__item">
+                    <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                      <div class="way__title">Другие способы оплаты</div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="way__hidden">
+                      <div class="way__mode">
+                        <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                          <input type="radio" name="paymentSystem" value="1" id="banking">
+                          <label for="banking" class="input-title">Интернет банкинг</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="way__mode">
+                        <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                          <input type="radio" name="paymentSystem" value="2" id="money">
+                          <label for="money" class="input-title">Системы денежных переводов</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="way__item">
+                    <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                      <div class="way__title">Купить в кредит (онлайн)</div>
+                      <div class="way__descr">Банки партнёры: Тинькофф Кредитные Системы</div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="way__hidden">
+                      <div class="way__mode">
+                        <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                          <input type="radio" name="paymentSystem" value="1" id="credit">
+                          <label for="credit" class="input-title">Купить в кредит</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0"><br>
+                        <p>Сумма кредита до 200 000 Р.</p>
+                        <p>Решение без звонка за 2 минуты, круглосуточно и в онлайне</p>
+                        <p>Погашение по всей России без комиссии</p>
+                        <p>Льготный период кредитования до даты первого платежа (вы не платите проценты)</p>
+                        <p><img src="img/credits.png" alt=""></p><br>
+                        <div class="form-group check-group">
+                          <input type="checkbox" checked="true" value="1" id="check_credit">
+                          <label for="check_credit" class="input-title">Я подтверждаю своё согласие на передачу персональных данных в банк</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="outer-block outer-block--mod">
+              <div class="col-xs-24 col-md-24">
+                <div class="form-group__title">Пункты самовывоза</div>
+                <ul id="nav-points" role="tablist" class="nav nav-tabs nav-points">
+                  <li role="presentation" class="active"><a href="#list_tab" aria-controls="nav-points" role="tab" data-toggle="tab">Список</a></li>
+                  <li role="presentation"><a href="#map_tab" aria-controls="nav-points" role="tab" data-toggle="tab">На карте</a></li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+              <div class="tab-content nav-points-content">
+                <div role="tabpanel" id="list_tab" class="tab-pane active">
+                  <div class="ways-block ways-block__mod">
+                    <div class="way__mode way__mode-sel">
+                      <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                        <input type="radio" checked="checked" name="points" value="1">
+                        <div class="input-title">
+                          <div class="way__title">Бабушкинская</div>
+                          <div class="way__address">Москва, Менжинского&nbsp;ул., д.38,<br> Понедельник&nbsp;- Воскресенье<br> с 10:00 до&nbsp;22:00</div>
+                          <div class="way__day">сегодня</div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="way__mode">
+                      <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                        <input type="radio" name="points" value="2">
+                        <div class="input-title">
+                          <div class="way__title">Домодедовская</div>
+                          <div class="way__address">Москва, Менжинского&nbsp;ул., д.38,<br> Понедельник&nbsp;- Воскресенье<br> с 10:00 до&nbsp;22:00</div>
+                          <div class="way__day">сегодня</div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="way__mode">
+                      <div class="col-xs-24 col-xs-offset-1 col-md-24 col-md-offset-0">
+                        <input type="radio" name="points" value="3">
+                        <div class="input-title">
+                          <div class="way__title">Кантемировская</div>
+                          <div class="way__address">Москва, Менжинского&nbsp;ул., д.38,<br> Понедельник&nbsp;- Воскресенье<br> с 10:00 до&nbsp;22:00</div>
+                          <div class="way__day">сегодня</div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" id="map_tab" class="tab-pane">
+                  <div class="col-xs-24 col-md-24">
+                    <div id="map_container" class="map_container">
+                      <script>
+                        var yaMapPoints = [{"val":"66","lat":"55.870447","lng":"37.661559","address":"129281, \u041c\u043e\u0441\u043a\u0432\u0430, \u041c\u0435\u043d\u0436\u0438\u043d\u0441\u043a\u043e\u0433\u043e \u0443\u043b., \u0434.38","metro":"\u0411\u0430\u0431\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0430\u044f","metroLine":"m6","phone":"","workingMode":"\u041f\u043e\u043d\u0435\u0434\u0435\u043b\u044c\u043d\u0438\u043a \u2013 \u0412\u043e\u0441\u043a\u0440\u0435\u0441\u0435\u043d\u044c\u0435 \u0441 10:00 \u0434\u043e 22:00","image":"<img src=\"http:\/\/static.tehnosila.ru\/images\/stores\/thumb\/8022b41e7db6.jpg\" alt=\"\u0411\u0430\u0431\u0443\u0448\u043a\u0438\u043d\u0441\u043a\u0430\u044f\" \/>"},{"val":"69","lat":"55.636972","lng":"37.652798","address":"115477, \u041c\u043e\u0441\u043a\u0432\u0430, \u041f\u0440\u043e\u043b\u0435\u0442\u0430\u0440\u0441\u043a\u0438\u0439 \u043f\u0440-\u0442, \u0434.14\/49, \u043a\u043e\u0440\u043f.3","metro":"\u041a\u0430\u043d\u0442\u0435\u043c\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f","metroLine":"m2","phone":"","workingMode":"\u041f\u043e\u043d\u0435\u0434\u0435\u043b\u044c\u043d\u0438\u043a \u2013 \u0412\u043e\u0441\u043a\u0440\u0435\u0441\u0435\u043d\u044c\u0435 \u0441 10:00 \u0434\u043e 21:00","image":"<img src=\"http:\/\/static.tehnosila.ru\/images\/stores\/thumb\/8009d4ecf44e.jpg\" alt=\"\u041a\u0430\u043d\u0442\u0435\u043c\u0438\u0440\u043e\u0432\u0441\u043a\u0430\u044f\" \/>"}];
+                        var region = {"lat":"55.760000","lng":"37.640000","zoom":"9"};
+                        var showGetButton = true;
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- order content-->
+            <div class="outer-block outer-block--mod form-show__outer">
+              <div class="col-xs-24 col-md-24">
+                <div class="check-list-title form-show__trigger">Состав заказа<span class="check-list-col">(2 товара)</span>
+                  <div class="filter__sign"></div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="form-show__block">
+                <div class="col-xs-24 col-md-24">
+                  <ol class="check-list-order">
+                    <li>
+                      <div class="check-list-inner">Холодильник Shivaki SHRF-50TR1<br>
+                        <div class="check-list-price">6 839 руб.</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="check-list-inner">Смартфон Apple iPhone 6 64GB<br>
+                        <div class="check-list-price">6 839 руб.</div>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <!-- /order content-->
+            <!--overall list-->
+            <div class="overall-list">
+              <div class="overall-list__title">Итого:</div>
+              <ul class="reset">
+                <li class="overall-list__item">
+                  <div class="overall-list__point">Стоимость</div>
+                  <div id="price" class="overall-list__price">49 000 Р.</div>
+                </li>
+                <li class="overall-list__item">
+                  <div class="overall-list__point">Доставка</div>
+                  <div id="deliveryPrice" class="overall-list__price">400 Р.</div>
+                </li>
+                <li class="overall-list__item">
+                  <div class="overall-list__point">Всего к оплате</div>
+                  <div id="overallPrice" class="overall-list__price overall-list__price-last">49 990 Р.</div>
+                </li>
+              </ul>
+            </div>
+            <!-- /overall list-->
+            <button class="button-control buy-button buy-button--mod">Завершить оформление</button>
+          </div>
+        </form>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="copyright col-xs-24 col-md-24"> Copyright &copy;&nbsp;Техносила</div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/touch-punch.min.js"></script>
+    <script src="scripts/slick.min.js"></script>
+    <script src="scripts/jquery.lazyload.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/popups.js"></script>
+    <script src="scripts/filter.js"></script>
+    <script src="scripts/lists.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/shops.js"></script>
+    <script src="scripts/yStoreMap.js"></script>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

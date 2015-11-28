@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="23px" height="16px" viewBox="0 0 23 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>Letter</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Letter" sketch:type="MSArtboardGroup" stroke="#D8D8D8" fill="#FFFFFF">
+            <g id="Triangles" sketch:type="MSLayerGroup">
+                <polygon id="Triangle" sketch:type="MSShapeGroup" transform="translate(4.500000, 13.500000) scale(1, -1) translate(-4.500000, -13.500000) " points="4.5 11 9 16 0 16 "></polygon>
+                <polygon id="Triangle" sketch:type="MSShapeGroup" points="4.5 0 9 5 0 5 "></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
