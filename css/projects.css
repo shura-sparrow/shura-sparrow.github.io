@@ -82,6 +82,11 @@
 .preloader_state_hidden {
     display: none;
 }
+.project-iframe_state_load {
+    opacity: 0;
+    -webkit-transition: opacity 0s 0s;
+    transition: opacity 0s 0s;
+}
 @-webkit-keyframes preloader{
     0%{
         -webkit-transform:rotate(0deg);
