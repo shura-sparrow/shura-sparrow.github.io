@@ -9,16 +9,17 @@ $(function(){
         $links = $('.project__pages-item').find('a'),
         $sel_class = 'project__pages-sel';
 
+    $projectIframe.on('load', function () {
+        $preloader.removeClass(loadPreloaderClass);
+        $projectIframe.removeClass(loadIframeClass);
+    });
+
     var $firstLink = $links.first().addClass($sel_class);
 
     var src = $firstLink.attr('href');
 
     $projectIframe.attr('src', src);
 
-    $projectIframe.on('load', function () {
-        $preloader.removeClass(loadPreloaderClass);
-        $projectIframe.removeClass(loadIframeClass);
-    });
     $links.on('click', function (e) {
         var $this = $(this),
             src = $this.attr('href');
