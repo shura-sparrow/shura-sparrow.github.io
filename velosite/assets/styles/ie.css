@@ -1,0 +1,20 @@
+.select__block {
+    position:relative;
+    display: inline-block;
+    z-index: 0;
+}
+.select__block .form__select {
+    z-index:1;
+}
+.select__block:before {
+    display:block;
+    position:absolute;
+    content:'';
+    right: 4px;
+    top: 1px;
+    background: #fff url('../images/select_arrow.png') 50% 50% no-repeat;
+    z-index: 5;
+    height: 32px;
+    width: 32px;
+    border-radius: 3px;
+}
