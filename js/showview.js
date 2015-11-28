@@ -3,8 +3,8 @@ $(function(){
         $preloader = $('#preloader'),
         transitionend = 'transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd otransitionend',
         activeLinkClass = 'project__link_state_active',
-        loadPreloaderClass = 'preloader_state_load',
-        loadedPreloaderClass = 'preloader_state_loaded',
+        loadPreloaderClass = 'preloader_state_shown',
+        loadedPreloaderClass = 'preloader_state_hidden',
         loadIframeClass = 'project-iframe_state_load',
         $links = $('.project__pages-item').find('a'),
         $sel_class = 'project__pages-sel';

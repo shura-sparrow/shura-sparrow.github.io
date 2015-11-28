@@ -76,6 +76,12 @@
     -webkit-animation: preloader 1s infinite linear;
     animation: preloader 1s infinite linear;
 }
+.preloader_state_shown{
+    opacity:1
+}
+.preloader_state_hidden {
+    display: none;
+}
 @-webkit-keyframes preloader{
     0%{
         -webkit-transform:rotate(0deg);
