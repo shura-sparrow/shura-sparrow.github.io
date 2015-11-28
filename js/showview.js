@@ -8,7 +8,7 @@ $(function(){
         loadIframeClass = 'project-iframe_state_load',
         $links = $('.project__pages-item').find('a'),
         $sel_class = 'project__pages-sel';
-    
+
     $preloader.on(transitionend, function (e) {
         if ($preloader.is(e.target)) {
             $preloader.addClass(loadedPreloaderClass);
