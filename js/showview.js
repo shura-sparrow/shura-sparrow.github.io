@@ -22,7 +22,7 @@ $(function(){
 
     var $firstLink = $links.first().parent().addClass($sel_class);
 
-    var src = $firstLink.attr('href');
+    var src = $firstLink.find('a').attr('href');
 
     $projectIframe.attr('src', src);
 
