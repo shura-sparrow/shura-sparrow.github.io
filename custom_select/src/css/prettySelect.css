@@ -1,0 +1,92 @@
+/* custom select styles */
+.pretty_select_wrapper {
+    position: relative;
+}
+.pretty_select__hidden {
+    display: none;
+}
+.pretty_select__magic {
+    line-height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+    cursor: pointer;
+    padding-right: 30px;
+    font-size: 13px;
+    height: 33px;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #a8a8a8;
+    color: #555;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    white-space: nowrap;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.pretty_select__arrow {
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../img/arrow.png') 50% 50% no-repeat;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+.pretty_select__opened .pretty_select__arrow {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.pretty_select__clear {
+    display: none;
+    width: 11px;
+    height: 11px;
+    margin-top: -5px;
+}
+.pretty_select__popup {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    -webkit-border-radius: 3px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius: 3px;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    z-index: 10;
+    display: none;
+}
+.pretty_select__popup-inner {
+    max-height: 150px;
+    overflow: auto;
+}
+.pretty_select__popup-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.pretty_select__popup-item-sel {
+    font-weight: bold;
+}
