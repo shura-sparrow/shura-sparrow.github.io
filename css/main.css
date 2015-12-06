@@ -288,7 +288,21 @@ a {
     padding-left: 10px;
     margin-bottom: 5px;
 }
-
+.code-example {
+    float: left;
+    margin-right: 25px;
+    max-width: 300px;
+    line-height: 1;
+}
+.code-example__img {
+    margin-bottom: 10px;
+    width: 170px
+}
+.code-example__outer {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    height: 170px;
+}
 /* footer */
 .site-footer {
     border-top: 7px solid #41969c;
