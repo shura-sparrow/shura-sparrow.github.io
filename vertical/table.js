@@ -54,7 +54,7 @@ window.onload = function() {
             "text-rendering='optimizeSpeed'>"+ params.text +"</text></svg>";
             object.id = 'id' + params.num;
             // set sizes for object
-            object.width = params.height + 'px';
+            object.width = params.height + 5 + 'px';
             object.height = params.width + 5 + 'px';
             // append object
             cell.removeChild(cell.firstChild);
