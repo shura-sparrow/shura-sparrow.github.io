@@ -55,7 +55,7 @@ window.onload = function() {
             object.id = 'id' + params.num;
             // set sizes for object
             object.width = params.height + 'px';
-            object.height = params.width + 'px';
+            object.height = params.width + 5 + 'px';
             // append object
             cell.removeChild(cell.firstChild);
             cell.appendChild(object);
