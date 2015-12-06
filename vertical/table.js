@@ -16,7 +16,7 @@ window.onload = function() {
             rotation.checkProperty('transform') ||
             !! window.ActiveXObject;
             supportSvg = rotation.supportsSvg();
-            if (supportCondition) {
+            if (!supportCondition) {
                 cells = document.getElementById('dataHeader').getElementsByTagName('span');
 
                 for (var i = 0; i < cells.length; i++) {
