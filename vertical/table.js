@@ -50,12 +50,12 @@ window.onload = function() {
             var object = document.createElement('object');
             object.type = "image/svg+xml";
             object.data = "data:image/svg+xml; charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg'>" +
-            "<text x='" + -params.width + "px' y='" + params.height + 5 + "px' font-family='" + params.fontFamily + "' font-size='" + params.fontSize +"' fill='#000000' transform='rotate(-90)' " +
+            "<text x='" + -params.width + "px' y='" + params.height + "px' font-family='" + params.fontFamily + "' font-size='" + params.fontSize +"' fill='#000000' transform='rotate(-90)' " +
             "text-rendering='optimizeSpeed'>"+ params.text +"</text></svg>";
             object.id = 'id' + params.num;
             // set sizes for object
-            object.width = params.height + 5 + 'px';
-            object.height = params.width + 5 + 'px';
+            object.width = params.height + 'px';
+            object.height = params.width + 'px';
             // append object
             cell.removeChild(cell.firstChild);
             cell.appendChild(object);
