@@ -16,7 +16,7 @@ window.onload = function() {
             rotation.checkProperty('transform') ||
             !! window.ActiveXObject;
             supportSvg = rotation.supportsSvg();
-            if (!supportCondition) {
+            if (supportCondition) {
                 cells = document.getElementById('dataHeader').getElementsByTagName('span');
 
                 for (var i = 0; i < cells.length; i++) {
@@ -54,7 +54,7 @@ window.onload = function() {
             "text-rendering='optimizeSpeed'>"+ params.text +"</text></svg>";
             object.id = 'id' + params.num;
             // set sizes for object
-            object.width = params.height + 'px';
+            object.width = params.height + 5 + 'px';
             object.height = params.width + 'px';
             // append object
             cell.removeChild(cell.firstChild);
