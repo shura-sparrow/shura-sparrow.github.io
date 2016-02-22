@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section class="container">
+            <div class="employee">
+                <div class="employee-info">
+                    <img class="avatar" src="img/avatar.jpg" alt="John Smith">
+                    <!-- description -->
+                    <article class="description">
+                        <div class="name-field">
+                            <h1 class="name">John Smith</h1>
+                            <input class="name-edit hidden-field" type="text" name="name_field">
+                        </div>
+                        <div class="country-field">
+                            <div class="country">Portland, Oregon, USA</div>
+                            <input class="country-edit hidden-field" type="text" name="country_field">
+                        </div>
+                        <div class="language">English</div>
+                        <ul class="skills">
+                            <li class="skill-item skill-strong">PHP
+                                <del class="skill-delete"></del>
+                            </li>
+                            <li class="skill-item skill-strong">Ruby
+                                <del class="skill-delete"></del>
+                            </li>
+                            <li class="skill-item skill-medium">Javascript
+                                <del class="skill-delete"></del>
+                            </li>
+                            <li class="skill-item skill-low">ActionScript
+                                <del class="skill-delete"></del>
+                            </li>
+                        </ul>
+                        <div class="skills-field">
+                            <a href="#" class="skills-add">Add skills</a>
+                            <div class="skills-addition">
+                                <input type="hidden" name="skills_list">
+                                <input type="text" maxlength="20" name="skill" class="skills-input" placeholder="Add skills">
+                                <div class="skills-selection">
+                                    <select name="power">
+                                        <option value="1">Strong</option>
+                                        <option value="2">Medium</option>
+                                        <option value="3">Low</option>
+                                    </select>
+                                    <button class="ready" id="powerSubmit"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="print">Print this page</div>
+                    </article>
+                    <!-- /description -->
+                </div>
+                <ul class="details">
+                    <li class="details-item">
+                        <div class="details-title">
+                            <h2 class="subtitle">Portfolio</h2>
+                            PHP, Ruby, Javascript
+                        </div>
+                        <ul class="list">
+                            <li><strong>NavalPlan</strong>, PHP, Ruby</li>
+                            <li><strong>MyTime</strong>, Javascript</li>
+                            <li><strong>Formidable</strong>, PHP, Ruby</li>
+                            <li><strong>MyTime</strong>, Javascript</li>
+                            <li><strong>Monsoon</strong>, ActionScript</li>
+                        </ul>
+                    </li>
+                    <li class="details-item">
+                        <div class="details-title">
+                            <h2 class="subtitle">Experience</h2>
+                        </div>
+                        <ul class="list">
+                            <li><strong>PHP</strong>, 6 years</li>
+                            <li><strong>Ruby</strong>, 7 years</li>
+                            <li><strong>Javascript</strong>, 4 years</li>
+                            <li><strong>ActionScript</strong>, 3 years</li>
+                        </ul>
+                    </li>
+                    <li class="details-item code-block"></li>
+                    <li class="details-item details-center">
+                        <div class="availability">
+                            <h2 class="subtitle">Availability</h2>
+                            <div class="meaning">Full-time</div>
+                        </div>
+                        <h2 class="subtitle subtitle-gap">Preferred environment</h2>
+                        <div class="list-gap">Git, GitHub, vim, emacs, Jenkins, Mac OSX</div>
+                    </li>
+                    <li class="details-item">
+                        <div class="cite-outer">
+                            <h2 class="subtitle subtitle-gap">The most amazing …</h2>
+                            <blockquote class="cite">
+                                ... Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore
+                                magna aliqua et&nbsp;dolore magna aliqua et&nbsp;dol ut&nbsp;labore et&nbsp;dolore
+                                <div class="author">- Martin</div>
+                            </blockquote>
+                        </div>
+                    </li>
+                    <li class="details-item">
+                        <div class="cite-outer">
+                            <h2 class="subtitle subtitle-gap">In clients I look for …</h2>
+                            <blockquote class="cite">
+                                … Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                labore
+                                <div class="author">- Martin</div>
+                            </blockquote>
+                        </div>
+                    </li>
+                    <li class="details-item">
+
+                    </li>
+                    <li class="details-item">
+                        <div class="cite-outer">
+                            <h2 class="subtitle subtitle-gap">Note</h2>
+                            <blockquote class="cite">
+                                … Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                labore
+                            </blockquote>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/rem.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/1.0.6/flexibility.js"></script>
+        <script src="js/main.js"></script>
+
+
+    </body>
+</html>
