@@ -36,9 +36,11 @@ $(document).ready(function(){
                 parentBlock = elem.closest('.editBlock');
                 skillName = $.trim(parentBlock.find('input').val().toLowerCase()),
                 skillPower = $.trim(parentBlock.find('select').val());
-            data.skills[skillName] = skillPower;
-            if (skillName!== '')
+            if (skillName !== '') {
+                data.skills[skillName] = skillPower;
                 addDomSkills();
+            }
+
         };
         var addDomSkills = function(){
             var skillsArray = sortSkills();
@@ -79,6 +81,8 @@ $(document).ready(function(){
             root.find('.editBlock').addClass('hidden-field');
             if (!editBlock.hasClass('skills-addition'))
                 editBlock.find('input').val(elem.text());
+            else
+                editBlock.find('input').val('');
             editBlock.removeClass('hidden-field');
             editBlock.find('input').focus();
         };

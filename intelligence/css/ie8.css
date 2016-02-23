@@ -4,3 +4,12 @@
 .skill-item:hover .skill-delete {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
+.skills-input {
+  float: left;
+}
+.skills-selection {
+  float: right;
+}
+.skills-addition {
+  display: block;
+}
