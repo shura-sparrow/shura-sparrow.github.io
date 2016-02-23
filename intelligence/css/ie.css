@@ -34,4 +34,7 @@
   min-height: inherit;
   padding-bottom: 2em;
 }
+.skills-selection select {
+  width: 5em;
+}
 

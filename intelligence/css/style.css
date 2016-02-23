@@ -15,8 +15,10 @@ a {
   max-width: 68.5em;
   padding: 10px;
 }
-.employee-info {
+.employee {
   position: relative;
+}
+.employee-info {
   background: #e0e0e0;
   -js-display: -webkit-box;
   -js-display: -webkit-flex;
