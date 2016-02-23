@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Return on intelligence - test layout</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,38 +18,52 @@
     </head>
     <body>
         <section class="container">
-            <div class="employee">
+            <div class="employee" id="employee">
                 <div class="employee-info">
                     <img class="avatar" src="img/avatar.jpg" alt="John Smith">
                     <!-- description -->
                     <article class="description">
-                        <div class="name-field">
-                            <h1 class="name">John Smith</h1>
-                            <input class="name-edit hidden-field" type="text" name="name_field">
+                        <div class="name-field relative-field">
+                            <h1 class="name edit-trigger editTrigger">John Smith</h1>
+                            <div class="name-edit hidden-field editBlock">
+                                <input class="field" maxlength="50" value="John Smith" type="text" name="username">
+                                <button class="ready"></button>
+                                <button class="remove"></button>
+                            </div>
                         </div>
-                        <div class="country-field">
-                            <div class="country">Portland, Oregon, USA</div>
-                            <input class="country-edit hidden-field" type="text" name="country_field">
+                        <div class="country-field relative-field">
+                            <div class="country edit-trigger editTrigger">Portland, Oregon, USA</div>
+                            <div class="country-edit hidden-field editBlock">
+                                <input class="field" maxlength="100" value="Portland, Oregon, USA" type="text" name="country">
+                                <button class="ready"></button>
+                                <button class="remove"></button>
+                            </div>
                         </div>
-                        <div class="language">English</div>
+                        <div class="language-field relative-field">
+                            <div class="language edit-trigger editTrigger">English</div>
+                            <div class="language-edit hidden-field editBlock">
+                                <input class="field" maxlength="50" value="English" type="text" name="language">
+                                <button class="ready"></button>
+                                <button class="remove"></button>
+                            </div>
+                        </div>
                         <ul class="skills">
-                            <li class="skill-item skill-strong">PHP
+                            <li class="skill-item skill-strong" data-tag="php">PHP
                                 <del class="skill-delete"></del>
                             </li>
-                            <li class="skill-item skill-strong">Ruby
+                            <li class="skill-item skill-strong" data-tag="ruby">Ruby
                                 <del class="skill-delete"></del>
                             </li>
-                            <li class="skill-item skill-medium">Javascript
+                            <li class="skill-item skill-medium" data-tag="javascript">Javascript
                                 <del class="skill-delete"></del>
                             </li>
-                            <li class="skill-item skill-low">ActionScript
+                            <li class="skill-item skill-low" data-tag="actionscript">ActionScript
                                 <del class="skill-delete"></del>
                             </li>
                         </ul>
                         <div class="skills-field">
-                            <a href="#" class="skills-add">Add skills</a>
-                            <div class="skills-addition">
-                                <input type="hidden" name="skills_list">
+                            <a href="#" class="skills-add editTrigger">Add skills</a>
+                            <div class="skills-addition hidden-field editBlock">
                                 <input type="text" maxlength="20" name="skill" class="skills-input" placeholder="Add skills">
                                 <div class="skills-selection">
                                     <select name="power">
@@ -57,7 +71,7 @@
                                         <option value="2">Medium</option>
                                         <option value="3">Low</option>
                                     </select>
-                                    <button class="ready" id="powerSubmit"></button>
+                                    <button class="ready skill-ready"></button>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +134,7 @@
                             </blockquote>
                         </div>
                     </li>
-                    <li class="details-item">
+                    <li class="details-item empty-block">
 
                     </li>
                     <li class="details-item">
@@ -140,6 +154,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/rem.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/1.0.6/flexibility.js"></script>
+        <script src="js/underscore-min.js"></script>
         <script src="js/main.js"></script>
 
 

@@ -12,7 +12,7 @@ a {
 }
 .container {
   margin: 0 auto;
-  max-width: 67rem;
+  max-width: 68.5rem;
   padding: 10px;
 }
 .employee-info {
@@ -45,25 +45,100 @@ a {
 }
 .avatar {
   width: 25%;
-  min-width: 16rem;
+  min-width: 14rem;
 }
 .description {
   padding: 1.785rem 2.14rem 2.14rem 2.5rem;
+  box-sizing: border-box;
+  width: 60%;
+  max-width: 37.5rem;
+}
+.edit-trigger {
+  border:1px solid transparent;
+  cursor: pointer;
+}
+.edit-trigger:hover {
+  border: 1px solid #acacac;
 }
 .name {
   font: normal 2.4rem/1 "Arial", Helvetica, sans-serif;
-  margin: 0 0 .8rem;
+  margin: 0 0 .5rem;
+  padding: .2rem 0;
 }
 .country {
   font-weight: bold;
   margin-bottom: .4rem;
+  cursor: pointer;
 }
 .hidden-field {
-  display: none;
+  display: none !important;
 }
-.language {
+.language-field {
   font-weight: bold;
   margin-bottom: 1.65rem;
+}
+.field {
+  width: 100%;
+  font-size: .9rem;
+  padding: .1rem;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+.relative-field {
+  position: relative;
+}
+.remove {
+  width: 1.14rem;
+  height: 1.14rem;
+  border: 0;
+  background: url("../img/icons.png") -50px -50px;
+}
+.ready {
+  border: 0;
+  width: 1.142rem;
+  height: 1.142rem;
+  background: url('../img/icons.png');
+}
+.relative-field .ready,
+.relative-field .remove {
+  position: absolute;
+}
+.relative-field .ready {
+  right: 2rem;
+  top: .2rem;
+}
+.relative-field .remove {
+  right: 0.5rem;
+  top: .2rem;
+}
+.name-edit,
+.country-edit,
+.language-edit {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+.name-edit .field {
+  font-size: 2.4rem;
+  left: -.1rem;
+  top: -.1rem;
+  position: relative;
+  padding-right: 4.5rem;
+}
+.name-edit .ready,
+.name-edit .remove {
+  height: 1.57rem;
+  width: 1.57rem;
+  top: .714rem;
+  background: url("../img/icons.png") -100px 0;
+}
+.name-edit .ready {
+  right: 2.42rem;
+}
+.name-edit .remove {
+  background: url("../img/icons.png") -100px -50px;
 }
 /* skills */
 .skills {
@@ -118,7 +193,6 @@ a {
 .skills-addition {
   position: absolute;
   top: 0;
-  visibility: hidden;
   border: 1px solid #24ff0a;
   font-size: 0.78rem;
   background: #fff;
@@ -170,12 +244,7 @@ a {
   display: inline-block;
   vertical-align: middle;
 }
-.ready {
-  border: 0;
-  width: 1.142rem;
-  height: 1.142rem;
-  background: url('../img/icons.png');
-}
+
 .skills-selection .ready {
   margin-left: .1rem;
 }
@@ -184,7 +253,7 @@ a {
   right: 1.42rem;
   top: 1.42rem;
   font-size: .9rem;
-  padding: 0 0.85rem;
+  padding: 0.05rem 0.85rem;
   line-height: 1.64rem;
   background: #000;
   color: #fff;
@@ -255,7 +324,7 @@ a {
 .details-title {
   padding: 0;
   margin: 0;
-  height: 3.7rem;
+  min-height: 3.7rem;
   text-align: center;
   font-size: .92rem;
 }
@@ -382,12 +451,7 @@ a {
   font-size: .8rem;
 }
 /* media */
-@media screen and (max-width: 768px) {
-  .details-item {
-    width: 33.3%;
-  }
-}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .details-item {
     width: 50%;
   }
@@ -401,6 +465,8 @@ a {
   }
   .description {
     padding: 1rem;
+    max-width: inherit;
+    width: auto;
   }
   .print {
     position: static;
@@ -411,8 +477,82 @@ a {
     background-size: cover;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
+  .details-item {
+    width: 33.3%;
+  }
+  .print {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .details-item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 450px) {
   .details-item {
     width: 100%;
+  }
+  .empty-block {
+    display: none;
+  }
+}
+@media print {
+  * {
+    color: #000 !important;
+  }
+  .details {
+    border: 0;
+    display: block;
+  }
+  .details-item {
+    width: 100%;
+    display: block;
+    border: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+    min-height: inherit;
+  }
+  .cite-outer {
+    min-height: inherit;
+    display: block;
+  }
+  .details-title,
+  .subtitle,
+  .availability,
+  .details-center {
+    text-align: left;
+  }
+  .cite-outer .subtitle {
+    display: block;
+  }
+  .details-title {
+    min-height: inherit;
+    margin-bottom: 1rem;
+  }
+  .skills-add,
+  .print,
+  .skills-addition {
+    display: none;
+  }
+  .list-gap,
+  .cite {
+    padding: 0;
+  }
+  .subtitle-gap {
+    margin-bottom: 1rem;
+  }
+  .availability {
+    margin: 0 0 1.57rem;
+  }
+  .employee-info {
+    margin-bottom: 2rem;
+  }
+  .skill-item {
+    padding: 0;
+  }
+  .skills {
+    margin-left: 0;
   }
 }
