@@ -81,8 +81,11 @@ $(document).ready(function(){
             root.find('.editBlock').addClass('hidden-field');
             if (!editBlock.hasClass('skills-addition'))
                 editBlock.find('input').val(elem.text());
-            else
+            else {
                 editBlock.find('input').val('');
+                $.placeholder.shim();
+            }
+
             editBlock.removeClass('hidden-field');
             editBlock.find('input').focus();
         };
