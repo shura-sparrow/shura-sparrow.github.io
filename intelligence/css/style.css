@@ -197,10 +197,6 @@ a {
   background: #fff;
   padding: 0.28rem .4rem;
   width: 17.9rem;
-  -js-display: -webkit-box;
-  -js-display: -webkit-flex;
-  -js-display: -ms-flexbox;
-  -js-display: flex;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

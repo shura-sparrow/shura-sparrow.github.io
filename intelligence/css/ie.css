@@ -9,6 +9,7 @@
 }
 .skills-selection {
   float: right;
+  width: 8rem;
 }
 .skills-addition {
   display: block;
