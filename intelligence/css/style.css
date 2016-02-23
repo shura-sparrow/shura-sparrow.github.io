@@ -241,12 +241,15 @@ a {
 .skills-input:-ms-input-placeholder {
   color: #3b3b3b;
 }
+.skills-selection {
+  white-space: nowrap;
+}
 .skills-selection * {
   display: inline-block;
   vertical-align: middle;
 }
 .skills-selection select {
-  width: 5rem;
+  width: 8.5rem;
 }
 .skills-selection .ready {
   margin-left: .1rem;
