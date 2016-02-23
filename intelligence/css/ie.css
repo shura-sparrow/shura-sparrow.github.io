@@ -17,3 +17,13 @@
 .description {
   width: auto;
 }
+.employee {
+  position: relative;
+}
+.employee-info {
+  position: static;
+}
+.details-item {
+  height: 17em;
+}
+
