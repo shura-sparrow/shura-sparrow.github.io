@@ -1,6 +1,10 @@
 .container {
   max-width: 68.5em !important;
 }
+.print {
+  position: absolute;
+  display: block;
+}
 .skill-delete {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
