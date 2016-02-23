@@ -27,6 +27,6 @@
   position: static;
 }
 .details .details-item {
-  min-height: 17em;
+  min-height: 17em !important;
 }
 
