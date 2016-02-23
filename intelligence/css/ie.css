@@ -28,5 +28,6 @@
 }
 .details .details-item {
   min-height: inherit;
+  padding-bottom: 2em;
 }
 
