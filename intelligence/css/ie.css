@@ -26,7 +26,7 @@
 .employee-info {
   position: static;
 }
-.details-item {
+.details .details-item {
   min-height: 17em;
 }
 
