@@ -12,7 +12,7 @@ a {
 }
 .container {
   margin: 0 auto;
-  max-width: 68.5rem;
+  max-width: 68.5em;
   padding: 10px;
 }
 .employee-info {
