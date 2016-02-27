@@ -10,9 +10,18 @@
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <link rel="stylesheet" href="css/main.css">
-        <!--[if lte IE 11]>
-            <link rel="stylesheet" href="css/ie.css" data-norem>
+        <!--[if lte IE 8]>
+            <style type="text/css">
+                .tip:after,
+                .tip:before {
+                    display: none;
+                }
+            </style>
         <![endif]-->
+        <!--[if lte IE 10]>
+            <link rel="stylesheet" href="css/ie.css">
+        <![endif]-->
+
     </head>
     <body>
         <div class="container">
