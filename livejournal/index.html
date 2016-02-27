@@ -25,17 +25,18 @@
                 </blockquote>
             </article>
         </div>
-    </body>
-    <script type="text/javascript">
-        var external = document.querySelectorAll('.external');
-        for (var i = 0; i < external.length; i++ ) {
-            (function(){
-                external[i].addEventListener('click', function(e){
-                    e.preventDefault();
-                    window.open(this.href,'_blank');
+        <script type="text/javascript">
+            var external = document.querySelectorAll('.external');
+            for (var i = 0; i < external.length; i++ ) {
+                (function(){
+                    external[i].addEventListener('click', function(e){
+                        e.preventDefault();
+                        window.open(this.href,'_blank');
 
-                })
-            })(i);
-        }
-    </script>
+                    })
+                })(i);
+            }
+        </script>
+        <script src="js/flexibility.js"></script>
+    </body>
 </html>
