@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Livejournal &mdash; test page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <article class="tip">
+                <ins class="tip__star"></ins>
+                <h1 class="tip__title">Можно попробовать</h1>
+                <div class="tip__text">
+                    Бы&nbsp;делают стратегические биг,&nbsp;его их меня труда запускали. Черт крыша
+                    уровня мы&nbsp;фон, ну большим <a href="http://www.google.com" class="external">хороший</a> нас, ставить
+                    полвосьмого мои&nbsp;во.
+                </div>
+                <blockquote class="tip__cite">
+                    Был раздутое найденных&nbsp;за. Код работа&nbsp;<b>неоригинальные</b> на, нью собой будет&nbsp;по. Три ты сказать
+                    получат <i>сохранение</i>, фон во&nbsp;<mark>делают уровней</mark> интервью, нас вы&nbsp;работы знания означает?
+                </blockquote>
+            </article>
+        </div>
+    </body>
+    <script type="text/javascript">
+        var external = document.querySelectorAll('.external');
+        for (var i = 0; i < external.length; i++ ) {
+            (function(){
+                external[i].addEventListener('click', function(e){
+                    e.preventDefault();
+                    window.open(this.href,'_blank');
+
+                })
+            })(i);
+        }
+    </script>
+</html>

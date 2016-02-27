@@ -1,0 +1,118 @@
+html {
+    padding: 0;
+    margin: 0;
+    line-height: 1.45;
+    font-size: 75%;
+    height: 100%;
+}
+body {
+    color: #333;
+    background: #ffffda;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    font-family: "Arial", Helvetica, sans-serif;
+}
+a {
+    color: #be0005;
+}
+.container {
+    padding-top: 100px;
+    /*display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; */
+    height: 100%;
+}
+mark {
+    background: none;
+    color: inherit;
+    border-bottom: 1px dashed;
+}
+.tip {
+    position: relative;
+    margin: auto;
+    color: #4786a5;
+    border: 1px solid #be0005;
+    padding: 1.1em 1.3em 1.75em 1.65em;
+    background: #fff;
+    max-width: 19.7em;
+    min-height: 10em;
+    box-sizing: border-box;
+    letter-spacing: .01em;
+}
+.tip__star {
+    position: absolute;
+    top: 0.58em;
+    right: 0.75em;
+    z-index: 2;
+    content: "";
+    width: 2.58em;
+    height: 2.5em;
+    background: url('../img/icons.png') -60px 0;
+}
+.tip:after {
+    background: #be0005;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 1.63em;
+    left: 1.63em;
+    content: "";
+    z-index: -1;
+    border-radius: 1.46em;
+}
+.tip:before {
+    position: absolute;
+    border-radius: 50%;
+    bottom: -1.25em;
+    right: -1.25em;
+    content: "";
+    width: 2.5em;
+    height: 2.5em;
+    background: #be0005;
+}
+.tip__title {
+    padding: 0;
+    margin: 0 0 .55em;
+    color: #be0005;
+    font-weight: bold;
+    font-size: 1.23em;
+}
+.tip__text {
+    text-indent: 1.61em;
+    padding-bottom: .65em;
+}
+.tip__cite {
+    padding: 0;
+    margin: 0;
+}
+.tip__cite:before {
+    width: 44px;
+    height: 47px;
+    content: "";
+    float: left;
+    margin: .04em 0.6em .058em -0.25em;
+    background: url('../img/icons.png') no-repeat;
+}
+.external {
+    position: relative;
+    text-decoration: none;
+}
+.external:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background: #be0005;
+    width: 100%;
+    content: '';
+}
+.external:after {
+    width: .58em;
+    height: .666em;
+    background: url("../img/icons.png") 0 -75px;
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    margin: -.2em 0 0 .2em;
+}
