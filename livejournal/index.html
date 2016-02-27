@@ -45,7 +45,8 @@
                     else {
                         external[i].attachEvent('onclick', function(e){
                             e.returnValue = false;
-                            window.open(this.href,'_blank');
+                            var target = e.target || e.srcElement;
+                            window.open(target.href,'_blank');
                         })
                     }
 
