@@ -12,4 +12,5 @@
 .tip:after,
 .tip:before {
     display: none\9;
+    display: block\9\0;
 }
