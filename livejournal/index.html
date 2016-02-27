@@ -36,11 +36,19 @@
             var external = document.querySelectorAll('.external');
             for (var i = 0; i < external.length; i++ ) {
                 (function(){
-                    external[i].addEventListener('click', function(e){
-                        e.preventDefault();
-                        window.open(this.href,'_blank');
+                    if (external[i].addEventListener) {
+                        external[i].addEventListener('click', function(e){
+                            e.preventDefault();
+                            window.open(this.href,'_blank');
+                        })
+                    }
+                    else {
+                        external[i].attachEvent('onclick', function(e){
+                            e.returnValue = false;
+                            window.open(this.href,'_blank');
+                        })
+                    }
 
-                    })
                 })(i);
             }
         </script>
