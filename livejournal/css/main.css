@@ -20,10 +20,6 @@ a {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -js-display: -webkit-box;
-    -js-display: -webkit-flex;
-    -js-display: -ms-flexbox;
-    -js-display: flex;
     min-height: 100%;
 }
 mark {
