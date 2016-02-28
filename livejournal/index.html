@@ -34,12 +34,12 @@
                     <h1 class="tip__title">Можно попробовать</h1>
                     <div class="tip__text">
                         Бы&nbsp;делают стратегические биг,&nbsp;его их меня труда запускали. Черт крыша
-                        уровня мы&nbsp;фон, ну большим <a href="http://www.google.com" class="external">хороший</a> нас, ставить
+                        уровня мы&nbsp;фон, ну большим <a href="http://www.livejournal.com" class="external">хороший</a> нас, ставить
                         полвосьмого мои&nbsp;во.
                     </div>
                     <blockquote class="tip__cite">
-                        Был раздутое найденных&nbsp;за. Код работа&nbsp;<b>неоригинальные</b> на, нью собой будет&nbsp;по. Три ты сказать
-                        получат <i>сохранение</i>, фон во&nbsp;<mark>делают уровней</mark> интервью, нас вы&nbsp;работы знания означает?
+                        Был раздутое найденных&nbsp;за. Код работа&nbsp;<strong>неоригинальные</strong> на, нью собой будет&nbsp;по. Три ты сказать
+                        получат <em>сохранение</em>, фон во&nbsp;<mark>делают уровней</mark> интервью, нас вы&nbsp;работы знания означает?
                     </blockquote>
                 </article>
             </div>
@@ -48,12 +48,14 @@
             var external = document.querySelectorAll('.external');
             for (var i = 0; i < external.length; i++ ) {
                 (function(){
+                    // for modern browsers
                     if (external[i].addEventListener) {
                         external[i].addEventListener('click', function(e){
                             e.preventDefault();
                             window.open(this.href,'_blank');
                         })
                     }
+                    // for old browsers
                     else {
                         external[i].attachEvent('onclick', function(e){
                             e.returnValue = false;
