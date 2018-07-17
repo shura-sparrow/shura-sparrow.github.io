@@ -296,7 +296,12 @@ a {
 }
 .code-example__img {
     margin-bottom: 10px;
-    width: 170px
+    width: 170px;
+    height: 161px;
+}
+.code-example__img--mod {
+    margin-bottom: 20px;
+    background: #ccc;
 }
 .code-example__outer {
     border: 1px solid #ccc;
